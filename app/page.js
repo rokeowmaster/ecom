@@ -1,7 +1,12 @@
 import React from 'react'
 import { Product, Herobanner, FooterBanner, Footer } from '@/components'
+import { getBannerData } from '@/sanity/query'
 
-const Home = () => {
+const Home = async () => {
+
+  const bannerData = await getBannerData()
+
+  console.log(bannerData)
   return (
     <div>
       <Herobanner />
